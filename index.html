@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Expense Tracker Pro</h1>
+    </header>
+
+    
+    <select id="currency">
+        <option value="INR">🇮🇳 India (₹)</option>
+        <option value="SAR">🇸🇦 Saudi Arabia (SAR)</option>
+    </select>
+
+    <section class="dashboard">
+    
+
+        <div class="dashboard-card">
+            <h3>Total Balance</h3>
+            <h2 id="totalBalance">₹ 0</h2>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Total Income</h3>
+            <h2 id="totalIncome">₹ 0</h2>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Total Expense</h3>
+            <h2 id="totalExpense">₹ 0</h2>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Total Transactions</h3>
+            <h2 id="totalTransactions">0</h2>
+        </div>
+
+    </section>
+
+    
+
+    <section class="form-container">
+
+        <form id="transactionForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Transaction Title"
+                required
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount"
+                required
+            >
+
+            <select id="type" required>
+                <option value="">Choose Type</option>
+                <option>Income</option>
+                <option>Expense</option>
+            </select>
+
+            <select id="category" required>
+                <option value="">All Categories</option>
+                <option>Food</option>
+                <option>Transport</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Entertainment</option>
+                <option>Health</option>
+                <option>Salary</option>
+                <option>Grocery</option>
+                <option>Vegetable</option>
+                <option>Fruits</option>
+                <option>Other</option>
+            </select>
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+            <button id="addBtn" type="submit">
+                Add Transaction
+            </button>
+
+            <button id="updateBtn" type="button">
+                Update Transaction
+            </button>
+
+        </form>
+
+    </section>
+
+    
+
+    <section class="search-filter">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search transaction..."
+        >
+
+        <select id="filterCategory">
+            <option value="All">All Categories</option>
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+            <option>Entertainment</option>
+            <option>Health</option>
+            <option>Salary</option>
+            <option>Grocery</option>
+            <option>vegetable</option>
+            <option>Fruits</option>
+            <option>Other</option>
+        </select>
+
+        <select id="sortOption">
+            <option value="Newest">Newest First</option>
+            <option value="Oldest">Oldest First</option>
+            <option value="Highest">Highest Amount</option>
+            <option value="Lowest">Lowest Amount</option>
+        </select>
+
+    </section>
+
+    
+
+    <section
+        id="transactionContainer"
+        class="transaction-container">
+        <!-- <div class="transaction-card">
+
+            <div class="top-section">
+        
+                <p class="transaction-type">
+                    Expense
+                </p>
+        
+                <h2 class="transaction-amount">
+                    ₹650
+                </h2>
+        
+            </div>
+        
+            <div class="middle-section">
+        
+                <h3 class="transaction-title">
+                    Grocery Shopping
+                </h3>
+        
+                <p class="transaction-category">
+                    Food
+                </p>
+        
+                <p class="transaction-date">
+                    02 Aug 2026
+                </p>
+        
+            </div>
+        
+            <div class="button-container">
+        
+                <button class="editBtn">
+                    Edit
+                </button>
+        
+                <button class="deleteBtn">
+                    Delete
+                </button>
+        
+            </div>
+        
+        </div> -->
+        
+    </section>
+    
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
